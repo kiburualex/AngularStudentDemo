@@ -1,0 +1,56 @@
+  <div class="modal-header">
+    <button type="button" class="close" aria-label="Close" ng-click="vm.cancel()"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title tc">Add User</h4>
+  </div>
+  <div class="modal-body">
+  <div style="padding: 10px;">
+    <form class="form-horizontal" role="form" name="studentForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" ng-model = "vm.studentDetail.username" ng-required = "true">
+        <!-- <div ng-show="studentForm.name.$invalid && studentForm.name.$touched" style="color: red;">
+        <small >Name Field Required</small>
+        </div> -->
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" ng-model = "vm.studentDetail.email" ng-required = "true">
+        <!-- <div ng-show="studentForm.email.$invalid && studentForm.email.$touched" style="color: red;">
+        <small >Name Email Required</small>
+        </div> -->
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" class="form-control" ng-model = "vm.studentDetail.phone" ng-required = "true">
+        <!-- <div ng-show="studentForm.phone.$invalid && studentForm.phone.$touched" style="color: red;">
+        <small >Name Phone Required</small>
+        </div> -->
+      </div>
+
+      <div class="form-group">
+        <label for="dob">DOB</label>
+        <!-- <p class="input-group">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-primary" ng-click="vm.open1()">
+             <i class="glyphicon glyphicon-calendar"></i>
+            </button>
+          </span> -->
+          <input type="text" name="dob" class="form-control" uib-datepicker-popup="{{vm.format}}" is-open="popup1.opened" ng-required="true" close-text="Close" ng-click="vm.open1()" ng-model = "vm.studentDetail.dob"/>
+          <!-- <div ng-show="studentForm.dob.$invalid && studentForm.dob.$touched" style="color: red;">
+           <small >Name DOB Required</small>
+          </div> -->
+        <!-- </p> -->
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-default pull-left" ng-click="vm.cancel()">Close</button>
+        <button type="button" class="btn btn-primary pull-right" ng-click="vm.addStudent()" ng-disabled="studentForm.$invalid">Save</button>
+      </div>
+    </form>
+    </div>
+  </div>
+  <!-- <div class="modal-footer">
+    
+  </div> -->
+   

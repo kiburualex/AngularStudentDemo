@@ -1,0 +1,36 @@
+<div class="col-md-6 col-md-offset-3">
+<div class="panel panel-primary loginPanel">
+	 <div class="panel-heading" style="text-align: center;">
+	   <h3 class="panel-title"> <i class="glyphicon glyphicon-user"> </i> Login</h3>
+	 </div>
+	 <div class="panel-body">
+
+	  <form class="form-vertical" role="form" name="loginForm" novalidate ng-submit="vm.login()">
+		 <div class="form-group">
+		    <label> Username</label>
+		 	<input type="text" name="name" class="form-control" ng-model="vm.credentials.username" ng-required="true">
+		 	<!-- <div ng-show="loginForm.name.$invalid && loginForm.name.$touched" style="color: red;text-align: center;">
+	 		  <small >Enter valid Username</small>
+	 	    </div> -->
+
+		 </div>
+		  
+		  <div class="form-group">
+		    <label> Password</label>
+		 	<input type="password" name="password" class="form-control" ng-model="vm.credentials.password" ng-required="true">
+		 	<!-- <div ng-show="loginForm.password.$invalid && loginForm.password.$touched" style="color: red;text-align: center;">
+	 		  <small >Enter valid Password</small>
+	 	    </div> -->
+		 </div>
+
+		 <div class="form-group b-group">
+		 	<button class="btn btn-primary" ladda="vm.submitting" data-style="expand-right" ng-disabled="loginForm.$invalid"> 
+		 	<span ng-show="vm.submitting">Login...</span>
+		 	<span ng-show="!vm.submitting">Login</span>
+		 	</button>
+		 </div>
+	  </form>
+
+	 </div>
+</div>
+</div>

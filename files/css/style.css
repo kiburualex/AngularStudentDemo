@@ -1,0 +1,21 @@
+body{
+	background-color: #fdfdfd;
+}
+.b-group{text-align: center;}
+.tc{text-align: center;}
+.loginPanel{
+ margin-top: 140px;
+}
+.panel-body{padding:20px;}
+form{padding:10px;}
+.nb{border-radius: 0px;}
+.panel-title{padding: 5px; font-size: 1.3em}
+
+.navbar-nav .dropdown .dropdown-toggle:hover{cursor: pointer;}
+.edit{text-align: center;color: green;}
+.edit:hover{cursor: pointer;}
+.remove{text-align: center;color:red;}
+.remove:hover{cursor: pointer;}
+input.ng-invalid.ng-touched,textarea.ng-invalid.ng-touched{
+	border-bottom: 2px solid red;
+}
